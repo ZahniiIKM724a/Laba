@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+
+    cout << "enter a natural number: ";
+    cin >> n;
+
+    if (n <= 0) {
+        cout << "error: a number must be natural (greater than 0)" << endl;
+        return 1;
+    }
+
+    cout << "number divisors: " << n << ": " << endl;
+
+    int divisor = 1;
+
+    while (divisor <= n) {
+        if (n % divisor == 0) {
+            cout << divisor << " ";
+        }
+        divisor++;
+    }
+
+    cout << endl;
+
+    return 0;
+}
